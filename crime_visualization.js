@@ -108,7 +108,7 @@ title2 = "Non Domestic Crime Rate";
 newWidget = {
     fetchdata: {
         fetchPrimaryData: function () {
-            fetch('https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/am_pm.json')
+            fetch('https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/am_pm.json')
                 .then(response => {
                     return response.json();
                 })
@@ -127,7 +127,7 @@ newWidget = {
         },
         fetchdayData: function () {
 
-            fetch('https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/day.json')
+            fetch('https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/day.json')
                 .then(response => {
                     return response.json();
                 })
@@ -147,7 +147,7 @@ newWidget = {
         },
         fetchLocationdata: function () {
 
-            fetch('https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/location.json')
+            fetch('https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/location.json')
                 .then(response => {
                     return response.json();
                 })
@@ -164,7 +164,7 @@ newWidget = {
 
         },
         fetchYeardata: function () {
-            fetch('https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/year.json')
+            fetch('https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/year.json')
                 .then(response => {
                     return response.json();
                 })
@@ -584,7 +584,7 @@ newWidget = {
         }
 
         // Get the data
-        d3.json("https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/arr.json", function (error, data) {
+        d3.json("https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/arr.json", function (error, data) {
             if (error) throw error;
 
             // trigger render
@@ -783,7 +783,7 @@ newWidget = {
         }
 
         // Get the data
-        d3.json("https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/dom.json", function (error, data) {
+        d3.json("https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/dom.json", function (error, data) {
             if (error) throw error;
 
             // trigger render
@@ -798,7 +798,7 @@ newWidget = {
         fetchStackedBarData: function () {
             var _keys, tempObj = {}, processData = [];
             //fetch and process data 
-            d3.json("https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/primary_by_year.json	", function (error, data) {
+            d3.json("https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/primary_by_year.json", function (error, data) {
                 if (error) throw error;
                 //find out keys 
                 _keys = Object.keys(data[0]);
@@ -952,7 +952,7 @@ newWidget = {
         fetchBarData: function () {
             var processData = [];
             //fetch and process data 
-            d3.json("https://raw.githubusercontent.com/Riteshlohiya/Data608_Project_Chicago_Crimes/master/CrimeAnalysis/Crime_visualization/Schema/total_month.json", function (error, data) {
+            d3.json("https://raw.githubusercontent.com/Riteshlohiya/Chicagocrimes/master/total_month.json", function (error, data) {
                 if (error) throw error;
 
                 for (var i = 0; i < data.length; i++) {
